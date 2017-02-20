@@ -1,0 +1,19 @@
+{
+    "name": "vscode-bpmos-server",
+    "description": "Example implementation of a language server in node.",
+    "version": "0.0.1",
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {
+        "vscode-languageserver": "^3.0.4"
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.52",
+        "typescript": "^2.1.5"
+    },
+    "scripts": {
+        "compile": "installServerIntoExtension ../vscode-bpmos-client ./package.json ./tsconfig.json && tsc -p .",
+        "watch": "installServerIntoExtension ../vscode-bpmos-client ./package.json ./tsconfig.json && tsc --watch -p ."
+    }
+}
