@@ -39,6 +39,7 @@ connection.onInitialize((params): InitializeResult => {
 documents.onDidChangeContent((change) => {
 	let diagnostics: Diagnostic[] = [];
 	let lines = change.document.getText().split(/\r?\n/g);
+	console.dir(lines);
 	lines.forEach((line, i) => {
 		let index = line.indexOf('typescript');
 		if (index >= 0) {

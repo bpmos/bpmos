@@ -27,8 +27,9 @@ export function activate(context: ExtensionContext) {
         }
     }
 
+
     let clientOptions: LanguageClientOptions = {
-        documentSelector: ['plaintext'],
+        documentSelector: ['bpmos'], 
         synchronize: {
             configurationSection: 'languageServerExample',
             fileEvents: workspace.createFileSystemWatcher('**/clientrc')

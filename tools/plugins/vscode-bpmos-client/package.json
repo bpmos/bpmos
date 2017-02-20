@@ -11,7 +11,7 @@
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:plaintext"
+        "onLanguage:bpmos"
     ],
     "main": "./out/src/extension",
     "scripts": {

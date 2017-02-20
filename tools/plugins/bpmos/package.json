@@ -1,0 +1,26 @@
+{
+    "name": "bpmos",
+    "displayName": "bpmos",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "bpmos",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "bpmos",
+            "aliases": ["bpmos", "bpmos"],
+            "extensions": [".bpmos"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "bpmos",
+            "scopeName": "bpmos",
+            "path": "./syntaxes/bpmos.tmLanguage.json"
+        }]
+    }
+}
