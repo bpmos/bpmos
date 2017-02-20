@@ -1,0 +1,1 @@
+function validaArquivo(document): Diagnostic[]
