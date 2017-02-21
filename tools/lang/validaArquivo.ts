@@ -1,6 +1,11 @@
-function validaArquivo(document): Diagnostic[]
-{
-  let lines = document.getText().split(/\r?\n/g);
+import {
+	TextDocument, Diagnostic, DiagnosticSeverity,
+} from 'vscode-languageserver';
+
+
+export function validaArquivo(document: TextDocument): Diagnostic[] {
+	let diagnostics: Diagnostic[] = [];
+	let lines = document.getText().split(/\r?\n/g);
 	console.dir(lines);
 	lines.forEach((line, i) => {
 		let index = line.indexOf('typescript');
@@ -16,5 +21,5 @@ function validaArquivo(document): Diagnostic[]
 			});
 		}
 	})
-  return diagnostics;
+	return diagnostics;
 }

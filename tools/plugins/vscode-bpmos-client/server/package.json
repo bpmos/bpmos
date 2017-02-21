@@ -11,7 +11,7 @@
     "devDependencies": {
         "@types/node": "^6.0.52",
         "typescript": "^2.1.5"
-    },
+    },  
     "scripts": {
         "compile": "installServerIntoExtension ../vscode-bpmos-client ./package.json ./tsconfig.json && tsc -p .",
         "watch": "installServerIntoExtension ../vscode-bpmos-client ./package.json ./tsconfig.json && tsc --watch -p ."

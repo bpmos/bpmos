@@ -11,6 +11,14 @@ import {
 	InitializeParams, InitializeResult
 } from 'vscode-languageserver';
 
+import {
+	validaArquivo
+} from '../../../lang/validaArquivo';
+
+// import {
+// 	validaArquivo
+// } from './validaArquivo';
+
 // Create a connection for the server. The connection uses Node's IPC as a transport
 let connection: IConnection = createConnection(new IPCMessageReader(process), new IPCMessageWriter(process));
 
@@ -37,25 +45,10 @@ connection.onInitialize((params): InitializeResult => {
 // The content of a text document has changed. This event is emitted
 // when the text document first opened or when its content has changed.
 documents.onDidChangeContent((change) => {
-	let diagnostics: Diagnostic[] = [];
-	let lines = change.document.getText().split(/\r?\n/g);
-	console.dir(lines);
-	lines.forEach((line, i) => {
-		let index = line.indexOf('typescript');
-		if (index >= 0) {
-			diagnostics.push({
-				severity: DiagnosticSeverity.Warning,
-				range: {
-					start: { line: i, character: index },
-					end: { line: i, character: index + 10 }
-				},
-				message: `${line.substr(index, 10)} should be spelled TypeScript`,
-				source: 'ex'
-			});
-		}
-	})
-	// Send the computed diagnostics to VS Code.
+	let diagnostics: Diagnostic[] = validaArquivo(change.document);
+
 	connection.sendDiagnostics({ uri: change.document.uri, diagnostics });
+
 });
 
 // Listen on the connection
