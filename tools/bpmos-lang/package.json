@@ -1,0 +1,15 @@
+{
+    "name": "bpmos-lang",
+    "displayName": "bpmos-lang",
+    "description": "",
+    "main": "out/src/validaArquivo",
+    "typings": "src/validaArquivo",
+    "private": true,
+    "dependencies": {
+        "vscode-languageserver": "^3.0.4"
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.52",
+        "typescript": "^2.1.5"
+    }    
+}
