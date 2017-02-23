@@ -1,0 +1,27 @@
+application: helloworld
+
+title:
+  - pt_br: Olá mundo
+  - en: Hello World
+x
+languages:
+  - pt_br
+  - en
+  - es
+  - fr
+  - ge 
+abcd
+components:
+  
+views:
+  view_hello_world  
+
+icon: fa/times
+
+builders:
+  - html5 - node
+  - html5 - go
+  - java android
+  - swift
+  - meteor
+  - c console

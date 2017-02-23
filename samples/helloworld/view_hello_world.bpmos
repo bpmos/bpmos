@@ -1,0 +1,7 @@
+view: view_hello_world
+
+panel:
+  text:
+    - pt_br: Olá mundo
+    - en: Hello World  
+x s
